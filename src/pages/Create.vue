@@ -90,9 +90,11 @@ export default {
   },
   methods: {
     clearForm() {
-      this.name = "";
+      this.nama = "";
+      this.alamat = "";
+      this.kota = "";
+      this.provinsi = "";
       this.email = "";
-      this.password = "";
     },
     handleSubmit() {
       const token = window.sessionStorage.getItem("token");

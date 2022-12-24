@@ -16,7 +16,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item" v-if="isAuth">
+            <li class="nav-item" v-if="!isAuth">
               <a class="nav-link" href="#" v-on:click="handleLogout()"
                 >Logout</a
               >
