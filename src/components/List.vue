@@ -55,17 +55,17 @@ const props = defineProps({
   isAdmin: false,
 });
 
-const { show } = toRefs(props);
-const isShowing = ref(true);
+// const { show } = toRefs(props);
+// const isShowing = ref(true);
 const laravelData = ref({});
 
-watch(show, () => {
-  isShowing.value = false;
+// watch(show, () => {
+//   isShowing.value = false;
 
-  setTimeout(() => {
-    isShowing.value = true;
-  }, 500);
-});
+//   setTimeout(() => {
+//     isShowing.value = true;
+//   }, 500);
+// });
 const getResults = async (page = 1) => {
   const response = await fetch(`${BASE_API_URL}/siswa?page=${page}`, {
     headers: {

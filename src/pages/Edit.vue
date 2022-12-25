@@ -93,14 +93,17 @@ export default {
   },
   methods: {
     clearForm() {
-      this.name = "";
+      this.nama = "";
+      this.alamat = "";
+      this.kota = "";
+      this.provinsi = "";
       this.email = "";
-      this.password = "";
     },
     handleSubmit() {
+      const id = this.$route.params.id;
       const token = window.sessionStorage.getItem("token");
-      fetch(`${BASE_API_URL}/siswa`, {
-        method: "POST",
+      fetch(`${BASE_API_URL}/siswa/${id}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
